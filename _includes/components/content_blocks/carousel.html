@@ -3,9 +3,13 @@
 {% if block.title %}<h3 class="acc-content-block-header">{{ block.title }}</h3>{% endif %}
 
 {% if block.title == "Facility Photos" %}
-  <a href="/photos/facility">Show All</a>
-{% else %}
-  <a href="/photos/events">Show All </a>
+  <a href="/facility-photos">Show All</a>
+{% endif %}
+{% if block.title == "Event Photos" %}
+  <a href="/events-photos">Show All </a>
+{% endif %}
+{% if block.title == "Set Photos"%}
+  <a href="/sets-photos">Show All </a>
 {% endif %}
 <br/><br/>
 
@@ -62,6 +66,5 @@
 
 
 
-
+{% javascript jcarousel %}
 {% javascript jcarousel.responsive %}
-{% javascript jquery.jcarousel.min %}
