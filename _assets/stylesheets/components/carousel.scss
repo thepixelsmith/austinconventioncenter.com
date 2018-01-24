@@ -12,8 +12,7 @@ pre {
 }
 
 .wrapper {
-  max-width: 780px;
-
+ width: 100%;
  padding: 0 20px 10px 20px;
 
   margin: auto;
@@ -55,12 +54,12 @@ pre {
 .jcarousel li {
   float: left !important;
   width: 200px;
-  /*
-  border: 1px solid #fff;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  */
+/*
+ border: 1px solid #fff;
+ -moz-box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ box-sizing: border-box;
+ */
   display: flex;
   flex-direction: row;
   /* Below sets up your display method: flex-start|flex-end|space-between|space-around */
@@ -130,23 +129,23 @@ pre {
   line-height: 10px;
 
   background: #fff;
-  color: #4E443C;
+  color: #000;
   border-radius: 10px;
   text-indent: -9999px;
   margin-right: 7px;
-  -webkit-box-shadow: 0 0 2px #4E443C;
-  -moz-box-shadow: 0 0 2px #4E443C;
-  box-shadow: 0 0 2px #4E443C;
+  -webkit-box-shadow: 0 0 2px #000;
+  -moz-box-shadow: 0 0 2px #000;
+  box-shadow: 0 0 2px #000;
 }
 
 .jcarousel-pagination a.active {
-  background: #cacaca;
+  background: #333;
   color: #fff;
   opacity: 1;
 
-  -webkit-box-shadow: 0 0 2px #F0EFE7;
-  -moz-box-shadow: 0 0 2px #F0EFE7;
-  box-shadow: 0 0 2px #F0EFE7;
+  -webkit-box-shadow: 0 0 2px #000;
+  -moz-box-shadow: 0 0 2px #000;
+  box-shadow: 0 0 2px #000;
 }
 
 .carousel-caption{
@@ -168,4 +167,8 @@ pre {
   flex-shrink: 1;
 }
 
-
+.show-all-link {
+  float:right;
+  margin-right:30px;
+  margin-top: -30px;
+}
