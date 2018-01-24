@@ -16,7 +16,7 @@
                 carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
             })
             .jcarousel({
-                wrap: 'circular'
+                 wrap: 'none'
             });
 
         $('.jcarousel-control-prev')
