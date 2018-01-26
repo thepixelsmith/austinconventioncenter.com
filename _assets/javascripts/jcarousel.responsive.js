@@ -21,12 +21,12 @@
 
         $('.jcarousel-control-prev')
             .jcarouselControl({
-                target: '-=3'
+                target: '-=1'
             });
 
         $('.jcarousel-control-next')
             .jcarouselControl({
-                target: '+=3'
+                target: '+=1'
             });
 
         $('.jcarousel-pagination')
@@ -40,7 +40,7 @@
                 e.preventDefault();
             })
             .jcarouselPagination({
-                perPage: 3,
+                perPage: 1,
                 item: function(page) {
                     return '<a href="#' + page + '">' + page + '</a>';
                 }
