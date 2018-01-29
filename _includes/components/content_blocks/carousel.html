@@ -26,7 +26,7 @@
                     <li>
                       <div itemscope itemtype="http://schema.org/ImageGallery" data-gid="{{ block.sys.id }}" class="acc-gallery  acc-gallery-thumbnails">
 
-                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" data-index="{{ forloop.index0 }}" data-pid="{{ image.sys.id }}" class="acc-gallery-photo acc-gallery-photo-carousel" >
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" data-index="{{ forloop.index0 }}" data-pid="{{ image.sys.id }}" class="acc-gallery-photo acc-gallery-photo-carousel" style="width:100%;">
 
                           <a href="{{ image.url }}?w=1800" itemprop="contentUrl" data-width="{{ image.width }}" data-height="{{ image.height }}" data-url="{{ image.url }}">
                             <img src="{{ image.url }}?w=330&h=220&fit=thumb"

@@ -46,7 +46,7 @@ box-shadow: 0 0 2px #999;
 }
 
 .jcarousel li {
-  width: 200px;
+ /* width: 200px; */
   float: left;
   border: 1px solid #fff;
   -moz-box-sizing: border-box;
@@ -59,6 +59,7 @@ box-shadow: 0 0 2px #999;
 .jcarousel img {
   display: block;
   max-width: 100%;
+  width: 100%;
   height: auto !important;
 }
 
