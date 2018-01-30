@@ -16,7 +16,7 @@
                 carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
             })
             .jcarousel({
-                 wrap: 'none'
+                 wrap: ''
             })
             .jcarouselSwipe({
                 perSwipe: 1
