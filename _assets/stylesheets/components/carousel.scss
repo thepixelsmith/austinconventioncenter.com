@@ -4,6 +4,15 @@
 
 
 
+//small screen sizes
+// 812 coresponds to iphone-x
+@media only screen and  (max-width: 812px) {
+  .jcarousel-control-prev, .jcarousel-control-next {
+    display:none !important;
+  }
+
+}
+
 
 
 

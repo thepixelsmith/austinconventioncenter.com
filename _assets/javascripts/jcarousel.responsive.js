@@ -17,6 +17,9 @@
             })
             .jcarousel({
                  wrap: 'none'
+            })
+            .jcarouselSwipe({
+                perSwipe: 1
             });
 
         $('.jcarousel-control-prev')
