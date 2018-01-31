@@ -36,21 +36,13 @@
                                  itemprop="thumbnail" alt="{{ title | default: image.title }}"  />
                           </a>
 
-                          {% if block.showCaptions or image.caption != empty %}
-                            <figcaption class="acc-gallery-caption sr-only" itemprop="caption description">{{ image.caption | default: image.title | markdownify }}</figcaption>
-                            {% if gallery_image.title != empty %}
-                            <div class="carousel-caption"> <b>{{ gallery_image.title }}</b> </div>
-                            {% endif %}
-                            {% if gallery_image.caption != empty %}
-                            <div class="carousel-caption"> <i>{{ gallery_image.caption }} </i> </div>
-                            {% endif %}
+                          {% if block.showCaptions or gallery_image.caption != empty %}
+                            <figcaption class="acc-gallery-caption" itemprop="caption description">{{ gallery_image.caption | default: gallery_image.title | markdownify }}</figcaption>
                           {% endif %}
 
                         </figure>
                       </div>
-
                     </li>
-
                   {% endif %}
                 {% endfor %}
             </ul>
@@ -74,6 +66,6 @@
 
 
 
-{% javascript jcarousel %}
-{% javascript jcarousel.responsive %}
-{% javascript jquery.jcarousel-swipe.min %}
+{% javascript carousel/jcarousel %}
+{% javascript carousel/jcarousel.responsive %}
+{% javascript carousel/jquery.jcarousel-swipe.min %}
