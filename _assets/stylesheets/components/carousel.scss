@@ -10,9 +10,18 @@
   .jcarousel-control-prev, .jcarousel-control-next {
     display:none !important;
   }
-
+  /*
+  .jcarousel-pagination a {
+    font-size: 1.5vw !important;
+    height: 1.4vw !important;
+    width: 1.4vw !important;
+    line-height: 1.4vw !important;
+  } */
+  .caption-container{
+    height: 100%;
+    overflow:visible;
+  }
 }
-
 
 
 
@@ -123,7 +132,7 @@ box-shadow: 0 0 2px #999;
   text-decoration: none;
   display: inline-block;
 
-  font-size: 1vw;
+  font-size: 1.0vw;
   height: .9vw;
   width: .9vw;
   line-height: .9vw;
@@ -173,4 +182,10 @@ box-shadow: 0 0 2px #999;
   float:right;
   margin-right:30px;
   margin-top: -30px;
+}
+
+.caption-container{
+  padding-left: 3px;
+  padding-right: 3px;
+
 }

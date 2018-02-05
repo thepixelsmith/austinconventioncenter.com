@@ -26,7 +26,7 @@
                     <li>
                       <div itemscope itemtype="http://schema.org/ImageGallery" data-gid="{{ block.sys.id }}" class="acc-gallery  acc-gallery-thumbnails">
 
-                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" data-index="{{ forloop.index0 }}" data-pid="{{ image.sys.id }}" class="acc-gallery-photo acc-gallery-photo-carousel" style="width:99%;">
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" data-index="{{ forloop.index0 }}" data-pid="{{ image.sys.id }}" class="acc-gallery-photo acc-gallery-photo-carousel" style="width: 99%;padding-left:3px;padding-right: 3px;">
 
                           <a href="{{ image.url }}?w=1800" itemprop="contentUrl" data-width="{{ image.width }}" data-height="{{ image.height }}" data-url="{{ image.url }}">
                             <img src="{{ image.url }}?w=330&h=220&fit=thumb"
@@ -37,7 +37,7 @@
                           </a>
 
                           {% if block.showCaptions or gallery_image.caption != empty %}
-                            <figcaption class="acc-gallery-caption" itemprop="caption description">{{ gallery_image.caption | default: gallery_image.title | markdownify }}</figcaption>
+                            <figcaption class="acc-gallery-caption caption-container" itemprop="caption description">{{ gallery_image.caption | default: gallery_image.title | markdownify }}</figcaption>
                           {% endif %}
 
                         </figure>
@@ -68,4 +68,4 @@
 
 {% javascript carousel/jcarousel %}
 {% javascript carousel/jcarousel.responsive %}
-{% javascript carousel/jquery.jcarousel-swipe.min %}
+{% javascript carousel/jquery.jcarousel-swipe %}
