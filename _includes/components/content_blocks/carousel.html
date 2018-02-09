@@ -1,39 +1,28 @@
 {% assign block = include.block %}
 
-{% if block.title %}<h3 class="acc-content-block-header" style="margin-top: .5em;">{{ block.title }}</h3>{% endif %}
-<span class="show-all-link">
-  {% if block.title == "Facility Photos" %}
-    <a href="/facility-photos">Show All</a>
-  {% endif %}
-  {% if block.title == "Event Photos" %}
-    <a href="/events-photos">Show All </a>
-  {% endif %}
-  {% if block.title == "Set Photos"%}
-    <a href="/sets-photos">Show All </a>
-  {% endif %}
-</span>
-
 
 <script src="https://code.jquery.com/jquery-1.8.2.min.js" type="text/javascript"></script>
+{% if block.title == "Facility Photos" %}
   <div class="wrapper"  id="carousel_{{ block.sys.id }}">
     <div class="jcarousel-wrapper">
-        <div class="jcarousel" >
+        <div class="jcarousel">
+
             <ul style="display:flex;">
-                {% for gallery_image in block.galleryImages %}
+                {% for gallery_image in block.galleryImages limit:9 %}
                   {% assign image = gallery_image.image %}
 
                   {% if image.url %}
-                    <li>
+                    <li class="carousel-li">
                       <div itemscope itemtype="http://schema.org/ImageGallery" data-gid="{{ block.sys.id }}" class="acc-gallery  acc-gallery-thumbnails">
 
                         <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" data-index="{{ forloop.index0 }}" data-pid="{{ image.sys.id }}" class="acc-gallery-photo acc-gallery-photo-carousel" style="width: 99%;padding-left:3px;padding-right: 3px;">
 
-                          <a href="{{ image.url }}?w=1800" itemprop="contentUrl" data-width="{{ image.width }}" data-height="{{ image.height }}" data-url="{{ image.url }}">
+                          <a href="{{ image.url }}?w=1800" itemprop="contentUrl" data-width="{{ image.width }}" data-height="{{ image.height }}" data-url="{{ image.url }}" class="carousel-image-link">
                             <img src="{{ image.url }}?w=330&h=220&fit=thumb"
                                  srcset="{{ image.url }}?w=990&h=660&fit=thumb 3x,
                           {{ image.url }}?w=660&h=440&fit=thumb 2x,
                           {{ image.url }}?w=330&h=220&fit=thumb"
-                                 itemprop="thumbnail" alt="{{ title | default: image.title }}"  />
+                                 itemprop="thumbnail" alt="{{ title | default: image.title }}"  class="carousel-image" />
                           </a>
 
                           {% if block.showCaptions or gallery_image.caption != empty %}
@@ -44,9 +33,10 @@
                       </div>
                     </li>
                   {% endif %}
+
                 {% endfor %}
             </ul>
-
+            <h3 class="acc-content-block-header" style="margin-top: 1.5em;">The Facility</h3>
 
         </div>
 
@@ -55,17 +45,32 @@
 
         <p class="jcarousel-pagination"></p>
 
+
+
     </div>
+
+      <div style="margin-top: 10%;">
+          {% if site.title == "Palmer Events Center" %}
+          <iframe src="http://accd360tours.com/pec/index.html" style="width:100%;min-height:400px;"></iframe>
+          {% elsif site.title == "Austin Convention Center" %}
+          <iframe src="http://accd360tours.com/accd/index.html" style="width:100%;min-height:400px;"></iframe>
+          {% endif %}
+
+      </div>
+      <h3 class="acc-content-block-header" style="margin-top: .5em;">Virtual Tour</h3>
+
+
 
 
   </div>
-<script>
-
-</script>
+{% endif %}
 
 
 
 
-{% javascript carousel/jquery.jcarousel.min %}
-{% javascript carousel/jquery.jcarousel.responsive.min %}
+
+
+
+{% javascript carousel/jcarousel %}
+{% javascript carousel/jcarousel.responsive %}
 {% javascript carousel/jquery.jcarousel-swipe.min %}
