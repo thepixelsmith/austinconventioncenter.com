@@ -25,6 +25,8 @@
                                  itemprop="thumbnail" alt="{{ title | default: image.title }}"  class="carousel-image" />
                           </a>
 
+
+
                           {% if block.showCaptions or gallery_image.caption != empty %}
                             <figcaption class="acc-gallery-caption caption-container" itemprop="caption description">{{ gallery_image.caption | default: gallery_image.title | markdownify }}</figcaption>
                           {% endif %}
@@ -32,10 +34,12 @@
                         </figure>
                       </div>
                     </li>
+
                   {% endif %}
 
                 {% endfor %}
             </ul>
+            <p class="jcarousel-pagination"></p>
             <h3 class="acc-content-block-header" style="margin-top: 1.5em;">The Facility</h3>
 
         </div>
@@ -43,17 +47,21 @@
         <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
         <a href="#" class="jcarousel-control-next">&rsaquo;</a>
 
-        <p class="jcarousel-pagination"></p>
+
 
 
 
     </div>
 
+
+
       <div style="margin-top: 10%;">
           {% if site.title == "Palmer Events Center" %}
           <iframe src="http://accd360tours.com/pec/index.html" style="width:100%;min-height:400px;"></iframe>
+          <a href="http://accd360tours.com/pec/index.html" target="_parent">Virtual Tour</a>
           {% elsif site.title == "Austin Convention Center" %}
           <iframe src="http://accd360tours.com/accd/index.html" style="width:100%;min-height:400px;"></iframe>
+          <a href="http://accd360tours.com/accd/index.html" target="_parent">Virtual Tour"</a>
           {% endif %}
 
       </div>
