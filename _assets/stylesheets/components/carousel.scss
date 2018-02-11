@@ -4,7 +4,54 @@
 
 
 //screen sizes
-// 812 coresponds to iphone-x
+
+
+@media only screen and  (max-width: 2960px) {
+  .jcarousel-control-prev, .jcarousel-control-next {
+    display:none !important;
+  }
+
+  .jcarousel-pagination{
+    bottom: 28% !important;
+    left: 50% !important;
+    //border: 3px solid darkmagenta !important;
+  }
+
+  .jcarousel-pagination a {
+    font-size: 0.6vw !important;
+    height: 0.5vw !important;
+    width: 0.5vw !important;
+    line-height: 0.5vw !important;
+  }
+  .caption-container{
+    height: 100%;
+    overflow:visible;
+  }
+}
+
+@media only screen and  (max-width: 1440px) {
+  .jcarousel-control-prev, .jcarousel-control-next {
+    display:none !important;
+  }
+
+  .jcarousel-pagination{
+    bottom: 26% !important;
+    left: 50% !important;
+    //border: 5px solid black !important;
+  }
+
+  .jcarousel-pagination a {
+    font-size: 1.0vw !important;
+    height: 0.9vw !important;
+    width: 0.9vw !important;
+    line-height: 0.9vw !important;
+  }
+  .caption-container{
+    height: 100%;
+    overflow:visible;
+  }
+}
+// 812 corresponds to iphone-x
 @media only screen and  (max-width: 812px) {
   .jcarousel-control-prev, .jcarousel-control-next {
     display:none !important;
@@ -13,6 +60,7 @@
   .jcarousel-pagination{
     bottom: 32% !important;
     left: 50% !important;
+    //border: 1px solid brown;
   }
 
   .jcarousel-pagination a {
@@ -29,6 +77,7 @@
 
 
 @media only screen and  (max-width: 736px) {
+
   .jcarousel-control-prev, .jcarousel-control-next {
     display:none !important;
   }
@@ -59,7 +108,7 @@
   .jcarousel-pagination{
     bottom: 36% !important;
     left: 50% !important;
-   // border: 1px solid green !important;
+    //border: 1px solid orange !important;
   }
 
   .jcarousel-pagination a {
@@ -80,9 +129,32 @@
   }
 
   .jcarousel-pagination{
+    bottom: 30% !important;
+    left: 50% !important;
+    //border: 1px solid yellow !important;
+  }
+
+  .jcarousel-pagination a {
+    font-size: 3.0vw;
+    height: 2.9vw;
+    width: 2.9vw;
+    line-height: 2.9vw;
+  }
+  .caption-container{
+    height: 100%;
+    overflow:visible;
+  }
+}
+
+@media only screen and  (max-width: 414px) {
+  .jcarousel-control-prev, .jcarousel-control-next {
+    display:none !important;
+  }
+
+  .jcarousel-pagination{
     bottom: 38% !important;
     left: 50% !important;
-    //border: 1px solid blue !important;
+    //border: 1px solid gray !important;
   }
 
   .jcarousel-pagination a {
@@ -107,7 +179,7 @@
   .jcarousel-pagination{
     bottom: 40% !important;
     left: 50% !important;
-    //border: 1px solid violet !important;
+    //border: 1px solid green !important;
   }
 
   .jcarousel-pagination a {
@@ -131,7 +203,7 @@
   .jcarousel-pagination{
     bottom: 45% !important;
     left: 50% !important;
-    //border: 1px solid gray !important;
+    //border: 1px solid blue !important;
   }
 
   .jcarousel-pagination a {
@@ -250,6 +322,7 @@ box-shadow: 0 0 2px #999;
 /** these are the bubbles that indicate the relative position of the image you are viewing **/
 
 .jcarousel-pagination {
+  //border: 2px solid violet;
   position: absolute;
   bottom: 27%;
   left: 50%;
