@@ -6,7 +6,7 @@
 //screen sizes
 
 
-@media only screen and  (max-width: 2960px) {
+@media only screen and  (max-device-width: 2960px) {
   .jcarousel-control-prev, .jcarousel-control-next {
     display:none !important;
   }
@@ -29,7 +29,7 @@
   }
 }
 
-@media only screen and  (max-width: 1440px) {
+@media only screen and  (max-device-width: 1440px) {
   .jcarousel-control-prev, .jcarousel-control-next {
     display:none !important;
   }
@@ -52,7 +52,7 @@
   }
 }
 // 812 corresponds to iphone-x
-@media only screen and  (max-width: 812px) {
+@media only screen and  (max-device-width: 812px) {
   .jcarousel-control-prev, .jcarousel-control-next {
     display:none !important;
   }
@@ -76,7 +76,7 @@
 }
 
 
-@media only screen and  (max-width: 736px) {
+@media only screen and  (max-device-width: 736px) {
 
   .jcarousel-control-prev, .jcarousel-control-next {
     display:none !important;
@@ -100,7 +100,7 @@
   }
 }
 
-@media only screen and  (max-width: 667px) {
+@media only screen and  (max-device-width: 667px) {
   .jcarousel-control-prev, .jcarousel-control-next {
     display:none !important;
   }
@@ -123,7 +123,7 @@
   }
 }
 
-@media only screen and  (max-width: 640px) {
+@media only screen and  (max-device-width: 640px) {
   .jcarousel-control-prev, .jcarousel-control-next {
     display:none !important;
   }
@@ -146,7 +146,7 @@
   }
 }
 
-@media only screen and  (max-width: 414px) {
+@media only screen and  (max-device-width: 414px) {
   .jcarousel-control-prev, .jcarousel-control-next {
     display:none !important;
   }
@@ -171,7 +171,7 @@
 
 
 
-@media only screen and  (max-width: 375px) {
+@media only screen and  (max-device-width: 375px) {
   .jcarousel-control-prev, .jcarousel-control-next {
     display:none !important;
   }
@@ -195,7 +195,7 @@
 }
 
 
-@media only screen and  (max-width: 360px) {
+@media only screen and  (max-device-width: 360px) {
   .jcarousel-control-prev, .jcarousel-control-next {
     display:none !important;
   }
